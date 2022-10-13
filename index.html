@@ -14,48 +14,6 @@
 
 <body class="has-background-link-light">
 
-<!--
-    <div class="tile is-vertical">
-
-        <section class="tile">
-            <div class = "content has-text-centered">
-                <figure class="image is-5by4" >
-                    <img src="./assets/images/Brand - Final.png" alt = "Particle Solutions Brand: Light purple background">
-                </figure>
-            </div>
-        </section>
-
-    <section class="tile">
-        <div class="content has-text-centered">
-            <form class="form">
-                <label for="cname">Enter your location </label><br>
-                <input type="text" id="city" name="city-name"><br><br>
-                
-                <input type="radio" id="one-day" name="radio_options">
-                <label for="html">Today's Forecast</label><br><br>
-            
-                
-                <input type="radio" id="five-day" name="radio_options">
-                <label for="css">Five-Day Forecast</label><br><br>
-                
-                <input type="submit" value="Submit"><br><br>
-            </form>
-        </div>  
-    </section>
-
-</div>
-
-    <div class="tile is-vertical">
-        <div class="content has-text-centered">
-            <button class="tile" id="aap-btn">My Asthma Action Plan</button><br><br>
-            <button class="tile" id="agb-btn">Access & Giving Back</button><br><br>
-        </div>
-    </div>
- -->
-
-
-
-
 <div class="tile is-ancestor">
     <div class="tile is-4 is-vertical is-parent">
         <div class="tile is-child box">
@@ -69,17 +27,17 @@
         <div class="tile is-child box">
             <div class="content has-text-centered">
                 <form class="form">
-                    <label for="cname">Enter your location </label><br>
-                    <input type="text" id="city" name="city-name"><br><br>
-                    
+
+                    <p> <strong> Enter your location below and select "Map" or "Forecast." </strong> </p>
+
                     <input type="radio" id="one-day" name="radio_options">
                     <label for="html">Today's Forecast</label><br><br>
                 
-                    
                     <input type="radio" id="five-day" name="radio_options">
                     <label for="css">Five-Day Forecast</label><br><br>
-                    
-                    <input type="submit" value="Submit"><br><br>
+
+                    <label for="cname">Enter your location </label><br><br>
+                    <input type="text" id="city" name="city-name"> <input type="submit" value="Submit">
                 </form>
             </div>  
         </div>
@@ -93,11 +51,19 @@
         </div>
       </div>
     </div>
-
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<footer class="footer">
+    <div class = "content has-text-centered">
+        <p> Particle Soltuions &copy 2022</p>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="./assets/js/script.js"></script>
+
 
 
 </body>
