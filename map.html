@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bulma CSS StyleSheet -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <!-- Leaflet Basic CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-     crossorigin=""/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
     <title>Heatmap Page</title>
-</head>
-<body>
-    <header>
-        header logo
+  </head>
+  <body>
+    <header class="hero is-link">
+        <div class="hero-body ">
+        <p class="title">
+            Particle Solutions
+        </p>
+        <p class="subtitle">
+            Got Particle Problems? We've got Particles Solutions!
+        </p>
+  </div>
     </header>
-    <div> Title or Place Name</div>
-    <div> <button>Air Pollution</button>
-    <button>Grass Pollen</button>
-    <button>Tree Pollen</button>
-    <button>Weed Pollen</button></div>
-    <div id="map" style="height:360px">map</div>
-    <footer>
-        footer
-    </footer>
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
-    crossorigin=""></script>
+    <div>Title or Place Name</div>
+    <div class="buttons is-centered is-grouped">
+      <button id = "airPollutionBtn" class="button is-link">Air Pollution</button>
+      <button id = "grassPollenBtn" class="button is-link">Grass Pollen</button>
+      <button id = "treePollenBtn" class="button is-link">Tree Pollen</button>
+      <button id = "weedPollenBtn" class="button is-link">Weed Pollen</button>
+    </div>
+    <div>map</div>
+    <footer>footer</footer>
     <script src="./assets/js/map.js"></script>
-</body>
+  </body>
 </html>
