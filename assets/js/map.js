@@ -1,7 +1,4 @@
-var airPollutionBtnEl = document.querySelector("#airPollutionBtn");
-var grassBtnEl = document.querySelector("#grassPollenBtn");
-var treeBtnEl = document.querySelector("#treePollenBtn");
-var weedBtnEl = document.querySelector("#weedPollenBtn");
+var btns = document.querySelector('.buttons')
 
 API_KEY = "f7ef38aba28849b8819220ae11e4b3e3";
 var map = L.map('map', {minZoom: 10}).setView([28.538336, -81.379234], 13);
@@ -25,7 +22,46 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var overlayExist = false;
 var layer;
 
-airPollutionBtnEl.addEventListener('click', function(){
+$("button").click(function(){
+    if (overlayExist == true){
+        layer.remove();
+    }
+    if(this.id == "airPollutionBtn"){
+        layer = L.tileLayer('https://tiles.breezometer.com/v1/air-quality/pm25/current-conditions/{z}/{x}/{y}.png?key={key}', {
+            key: API_KEY,
+            maxZoom: 19,
+            tms: false,
+            opacity: 0.45,
+            attribution: '&copy; <a href="https://www.breezometer.com/terms-of-use">Breezometer</a>'
+            }).addTo(map)
+    overlayExist = true;
+    }
+    else {
+        if (overlayExist == true){
+            layer.remove();
+        }
+        if(this.id == "grassPollenBtn"){
+            var pollenType = "grass";
+        }
+        else if (this.id == "treePollenBtn"){
+            var pollenType = "tree";
+        }
+        else if (this.id == "weedPollenBtn"){
+            var pollenType = "weed";
+        }
+        layer = L.tileLayer('https://tiles.breezometer.com/v1/pollen/' + pollenType + '/forecast/daily/{z}/{x}/{y}.png?key={key}', {
+            key: API_KEY,
+            maxZoom: 19,
+            tms: false,
+            opacity: 0.45,
+            attribution: '&copy; <a href="https://www.breezometer.com/terms-of-use">Breezometer</a>'
+        }).addTo(map)
+        overlayExist = true;
+    }
+});
+
+
+/*airPollutionBtnEl.addEventListener('click', function(){
     if (overlayExist == true){
         layer.remove();
     }
@@ -80,4 +116,4 @@ weedBtnEl.addEventListener('click', function(){
         attribution: '&copy; <a href="https://www.breezometer.com/terms-of-use">Breezometer</a>'
     }).addTo(map);
     overlayExist = true;
-});
+});*/
