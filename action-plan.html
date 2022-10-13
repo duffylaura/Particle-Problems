@@ -9,10 +9,65 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+
+    <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+
     <title> Asthma Action Plan</title>
 </head>
 
-<body>
+<body class="has-background-link-light">
+
+    <div class="tile is-ancestor">
+        <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child box">
+                <figure class="image is-5by4" >
+                    <img src="./assets/images/Brand - Final.png" alt = "Particle Solutions Brand: Light purple background">
+                </figure>
+            </div>
+        </div>
     
+        <div class="tile is-parent">
+            <div class="tile is-child box">
+                <form id="doing-well-form" class="form">
+                    <label> Doing Well </label> <br>
+                    <input type="text" id="doing-well">
+
+                    <button type="submit" value="Submit"> Submit </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="tile is-parent">
+            <div class="tile is-child box">
+                    <h3>Asthma Action Plan</h3>
+                    <br>
+                    <h2>Doing Well:</h2>
+                    <ul class="doing-well-list-group" id="doing-well-list"></ul>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer class="footer">
+        <div class = "content has-text-centered">
+            <p> Particle Soltuions &copy 2022</p>
+        </div>
+    </footer>
+    
+
+
+
+
+
 </body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- jQuery UI <script> tag -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="./assets/js/action-plan.js"> </script>
+
 </html>
