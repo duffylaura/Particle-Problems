@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bulma CSS StyleSheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
+    <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+
+    <title> Asthma Action Plan</title>
+</head>
+
+<body class="has-background-link-light">
+
+    <div class="tile is-ancestor">
+        <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child box">
+                <figure class="image is-5by4" >
+                    <img src="./assets/images/Brand - Final.png" alt = "Particle Solutions Brand: Light purple background">
+                </figure>
+            </div>
+        </div>
+    
+        <div class="tile is-parent">
+            <div class="tile is-child box">
+                <!-- Doing Well Form -->
+                <form id="doing-well-form" class="form">
+                    <label> Doing Well looks/feels like...</label> <br>
+                    <input type="text" id="doing-well">
+
+                    <button type="submit" value="Submit"> Submit </button>
+                </form>
+                <br><br>
+                
+                <!-- Asthma Getting Worse Form -->
+                <form id="getting-worse-form" class="form">
+                    <label> Getting Worse looks/feels like... </label> <br>
+                    <input type="text" id="getting-worse">
+
+                    <button type="submit" value="Submit"> Submit </button>
+                </form>
+                <br><br>
+                
+                 <!-- Medical Alert Form -->
+                <form id="medical-alert-form" class="form">
+                    <label> Medical Alert looks/feels like... </label> <br>
+                    <input type="text" id="medical-alert">
+
+                    <button type="submit" value="Submit"> Submit </button>
+                </form>
+                <br><br>
+
+            </div>
+        </div>
+
+        <div class="tile is-parent">
+            <div class="tile is-child box">
+                   
+                    <h4 class="content has-text-centered">My Asthma Action Plan</h4>
+                    <br>
+                    <h2>Doing Well:</h2>
+                    <ul class="doing-well-list-group" id="doing-well-list"></ul>
+                    <br><br>
+
+                    <h2>Getting Worse:</h2>
+                    <ul class="getting-worse-list-group" id="getting-worse-list"></ul>
+                    <br><br>
+
+                    <h2>Medical Alert:</h2>
+                    <ul class="medical-alert-list-group" id="medical-alert-list"></ul>
+                    <br><br>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer class="footer">
+        <div class = "content has-text-centered">
+            <p> Particle Soltuions &copy 2022</p>
+        </div>
+    </footer>
+    
+
+
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- jQuery UI <script> tag -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="./assets/js/action-plan.js"> </script>
+
+</html>
