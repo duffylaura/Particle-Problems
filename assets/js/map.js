@@ -1,23 +1,30 @@
 var btns = document.querySelector('.buttons')
 
-API_KEY = "f7ef38aba28849b8819220ae11e4b3e3";
-var map = L.map('map', {minZoom: 10}).setView([28.538336, -81.379234], 13);
-var pollenEndPoint = "https://api.breezometer.com/pollen/v2/forecast/daily?";
+var getCityName = localStorage.getItem("cityName");
+geoCodeApi();
 
-var corner1 = L.latLng((28.538336-0.05), -81.379234-0.05),
-corner2 = L.latLng(28.538336+0.05, -81.379234+0.05),
-bounds = L.latLngBounds(corner1, corner2);
-map.setMaxBounds(bounds);
+function geoCodeApi (){
+    var geocodeKey = 'f4ac9ae98ce232f81e1a8c7e3fd76a5a';
+    var url = 'https://api.openweathermap.org/geo/1.0/direct?q='+getCityName+'&limit=1&appid='+geocodeKey
+    console.log(url)
+    fetch(url).then(function(response){
+        return response.json()
+    }).then(function(data){
+        var lat = data[0].lat;
+        var lon = data[0].lon;
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+        API_KEY = "f7ef38aba28849b8819220ae11e4b3e3";
+        var map = L.map('map', {minZoom: 10}).setView([lat, lon], 13);
+        var corner1 = L.latLng((lat-0.05), lon-0.05),
+        corner2 = L.latLng(lat+0.05, lon+0.05),
+        bounds = L.latLngBounds(corner1, corner2);
+        map.setMaxBounds(bounds);
 
-/*fetch(pollenEndPoint + "lat=" + 28.538336 + "&lon=" + -81.379234 + "&key=" + API_KEY + "&days=1")
-    // fetch("https://api.breezometer.com/pollen/v2/forecast/daily?lat=48.857456&lon=2.354611&days=3&key=" + API_KEY + "&features=types_information,plants_information")
-    .then((response) => response.json())
-    .then((data) => console.log(data));*/
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
 
 var overlayExist = false;
 var layer;
@@ -59,61 +66,6 @@ $("button").click(function(){
         overlayExist = true;
     }
 });
+    })
+}
 
-
-/*airPollutionBtnEl.addEventListener('click', function(){
-    if (overlayExist == true){
-        layer.remove();
-    }
-    layer = L.tileLayer('https://tiles.breezometer.com/v1/air-quality/pm25/current-conditions/{z}/{x}/{y}.png?key={key}', {
-        key: API_KEY,
-        maxZoom: 19,
-        tms: false,
-        opacity: 0.45,
-        attribution: '&copy; <a href="https://www.breezometer.com/terms-of-use">Breezometer</a>'
-    }).addTo(map)
-    overlayExist = true;
-});
-
-
-grassBtnEl.addEventListener('click', function(){
-    if (overlayExist == true){
-        layer.remove();
-    }
-    layer = L.tileLayer('https://tiles.breezometer.com/v1/pollen/tree/forecast/daily/{z}/{x}/{y}.png?key={key}', {
-        key: API_KEY,
-        maxZoom: 19,
-        tms: false,
-        opacity: 0.45,
-        attribution: '&copy; <a href="https://www.breezometer.com/terms-of-use">Breezometer</a>'
-    }).addTo(map)
-    overlayExist = true;
-});
-
-treeBtnEl.addEventListener('click', function(){
-    if (overlayExist == true){
-        layer.remove();
-    }
-    layer = L.tileLayer('https://tiles.breezometer.com/v1/pollen/tree/forecast/daily/{z}/{x}/{y}.png?key={key}', {
-        key: API_KEY,
-        maxZoom: 19,
-        tms: false,
-        opacity: 0.45,
-        attribution: '&copy; <a href="https://www.breezometer.com/terms-of-use">Breezometer</a>'
-    }).addTo(map);
-    overlayExist = true;
-});
-
-weedBtnEl.addEventListener('click', function(){
-    if (overlayExist == true){
-        layer.remove();
-    }
-    layer = L.tileLayer('https://tiles.breezometer.com/v1/pollen/weed/forecast/daily/{z}/{x}/{y}.png?key={key}', {
-        key: API_KEY,
-        maxZoom: 19,
-        tms: false,
-        opacity: 0.45,
-        attribution: '&copy; <a href="https://www.breezometer.com/terms-of-use">Breezometer</a>'
-    }).addTo(map);
-    overlayExist = true;
-});*/
