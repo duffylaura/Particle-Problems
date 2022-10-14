@@ -8,98 +8,76 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>5 Days Forecast</title>
 </head>
-<body>
-    <header class="mt-6 has-text-centered is-size-1">Particles Solution</header>
-    <section class="section">
-        <div class="column">
-         <h1 class="title has-text-centered is-size-10"> 5 Days Forecast </h1>
-          <div class="columns mt-5 is-8 is-variable">
-           <div class="column is-4-tablet is-2-desktop">
-            
-            <div class="card">
-                <header id="card-date"></header>
-             <div class="card-image has-text-centered px-6" id="day">
-              <img src="./assets/Mocossi.png" alt="">
-             </div>
-                <div class="card-content">
-                    <p id="air-index">AQI: </p>
-                    <p>grass pollen:</p>
-                    <p>tree pollen:</p>
-                    <p>weed pollen:</p>
-                </div>
-            </div>
-            </div>
-           
-            <!-- <div class="column is-4-tablet is-2-desktop">
-             <div class="card">
-                <div class="card-image has-text-centered px-6" id="day-2">
-                 <img src="assets/Mocossi.png" alt="">
-                 </div>
-                   <div class="card-content">
-                       <p>air pollution:</p>
-                       <p>grass pollen:</p>
-                       <p>tree pollen:</p>
-                       <p>weed pollen:</p>
-                   </div>
-               </div>
-              </div>
-            <div class="column is-4-tablet is-2-desktop">
-             <div class="card">
-                <div class="card-image has-text-centered px-6" id="day-3">
-                 <img src="assets/Mocossi.png" alt="">
-                 </div>
-                    <div class="card-content">
-                        <p>air pollution:</p>
-                        <p>grass pollen:</p>
-                        <p>tree pollen:</p>
-                        <p>weed pollen:</p>
-                    </div>
-                  </div>
-                 </div>
-            <div class="column is-4-tablet is-2-desktop">
-             <div class="card">
-                <div class="card-image has-text-centered px-6" id="day-4">
-                 <img src="assets/Mocossi.png" alt="">
-                 </div>
-                    <div class="card-content">
-                        <p>air pollution:</p>
-                        <p>grass pollen:</p>
-                        <p>tree pollen:</p>
-                        <p>weed pollen:</p>
-                    </div>
-                  </div>
-                 </div>
-            <div class="column is-4-tablet is-2-desktop">
-             <div class="card">
-                <div class="card-image has-text-centered px-6" id="day-5">
-                 <img src="assets/Mocossi.png" alt="">
-                  </div>
-                    <div class="card-content">
-                       <p>air pollution:</p>
-                       <p>grass pollen:</p>
-                       <p>tree pollen:</p>
-                       <p>weed pollen:</p>
-                    </div>
-               </div>
-              </div>
-            </div> -->
-           </div>
-          </div>
-          
-       
-    </section>
 
+<body class="has-background-link-light">
 
-        
-            <!-- <div>Card 1</div>
-            <div>Card 2</div>
-            <div>Card 3</div>
-            <div>Card 4</div>
-            <div>Card 5</div> -->
+    <div class="tile is-ancestor">
+        <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child box">
+                <figure class="image is-5by4" >
+                    <img src="./assets/images/Brand - Final.png" alt = "Particle Solutions Brand: Light purple background">
+                </figure>
+            </div>
         </div>
-    </section>
-    <footer>Footer</footer>
+    
+        <div class="tile is-parent">
+            <div class="tile is-child box">
 
+               
+
+                <!-- Add cards below this line -->
+                <div class="column">
+                    <h1 class="title has-text-centered is-size-10"> 5 Day Forecast </h1>
+                     
+                    <!-- <div class="columns mt-5 is-8 is-variable">
+                      <div class="column is-4-tablet is-2-desktop"> -->
+                       
+                       <div class="card" class="content has-text-centered">
+                           <header id="card-date"></header>
+                        <div class="card-image has-text-centered px-6" id="day">
+                         <img src="./assets/Mocossi.png" alt="">
+                        </div>
+                           <div class="card-content">
+                               <p id="air-index">AQI: </p>
+                               <p>grass pollen:</p>
+                               <p>tree pollen:</p>
+                               <p>weed pollen:</p>
+                           </div>
+                       </div>
+
+
+
+                       <div class="card" class="content has-text-centered">
+                        <header id="card-date"></header>
+                     <div class="card-image has-text-centered px-6" id="day">
+                      <img src="./assets/Mocossi.png" alt="">
+                     </div>
+                        <div class="card-content">
+                            <p id="air-index">AQI: </p>
+                            <p>grass pollen:</p>
+                            <p>tree pollen:</p>
+                            <p>weed pollen:</p>
+                        </div>
+                    </div>
+
+
+
+
+
+                       </div>
+                    </div>
+                </div>
+            <!-- Add cards above this line -->
+
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class = "content has-text-centered">
+            <p> Particle Solutions &copy 2022</p>
+        </div>
+    </footer>
 
     <script src="./assets/js/5day.js"></script>
 </body>
