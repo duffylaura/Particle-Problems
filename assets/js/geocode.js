@@ -19,6 +19,7 @@ indexsubmitbtn.addEventListener("submit", function(help){
        getValue();
     }
     if(document.getElementById('one-day').checked){
+        storeCity();
         window.location.href = 'map.html';
     }
 
@@ -84,7 +85,10 @@ function getValue(event){
        
     }
     
-
+function storeCity(){
+    var city = document.getElementById("city").value;
+    localStorage.setItem("cityName", city);
+}
         
    
         
