@@ -75,3 +75,34 @@ var handleMedicalAlertFormSubmit = function (event) {
 };
 
 medicalAlertFormEl.on('submit', handleMedicalAlertFormSubmit);
+
+
+//// Local Storage ///
+
+var doingWellInput = document.querySelector("#doing-well");
+var gettingWorseInput = document.querySelector("#getting-worse");
+var medicalAlertInput = document.querySelector("#medical-alert");
+
+var doingWellList2 = document.querySelector("#doing-well-list");
+var gettingWorseList2 = document.querySelector('#getting-worse-list');
+var medicalAlertList2 = document.querySelector('#medical-alert-list');
+
+
+renderLastRegistered();
+
+function renderLastRegistered() {
+  var doingWell2 = localStorage.getItem("doing-well");
+  var gettingWorse2 = localStorage.getItem("getting-worse");
+  var medicalAlert2 = localStorage.getItem("medical-alert");
+
+  doingWellList2.textContent = doingWell2;
+  gettingWorseList2.textContent = gettingWorse2; 
+  medicalAlertList2.textContent = medicalAlert2; 
+}
+
+    localStorage.setItem("doing-well", doingWell2);
+    localStorage.setItem("getting-worse", gettingWorse2);
+    localStorage.setItem("medical-alert",medicalAlert2);
+    renderLastRegistered();
+
+////
