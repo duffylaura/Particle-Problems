@@ -5,6 +5,11 @@
 
 var indexsubmitbtn = document.querySelector("form");
 var city = document.getElementById("city").value;
+var actPlanBtn = document.getElementById('aap-btn');
+
+actPlanBtn.addEventListener("click", function(){
+    window.location.href = "action-plan.html";
+})
 
 
 indexsubmitbtn.addEventListener("submit", function(help){
