@@ -13,6 +13,10 @@ indexsubmitbtn.addEventListener("submit", function(help){
     if(document.getElementById('five-day').checked){
        getValue();
     }
+    if(document.getElementById('one-day').checked){
+        window.location.href = 'map.html';
+    }
+
 })
 
 var nextPage = function (e){
