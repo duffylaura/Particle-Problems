@@ -48,7 +48,7 @@ function geoCodeApi (search){
 
     function getWeatherAPI(lat, lon){
         var apiKey = "aa3ac1aee36fc947283c79786b233621";
-        var url = `http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
+        var url = `https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
         fetch(url).then(function(response){
             console.log(response)
             return response.json()
