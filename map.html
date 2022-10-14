@@ -19,6 +19,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Heatmap Page</title>
   </head>
+
+
+  <!--
   <body>
     <header class="hero is-link">
       <div class="hero-body">
@@ -53,3 +56,53 @@
     <script src="./assets/js/map.js"></script>
   </body>
 </html>
+-->
+
+
+
+
+
+<body class="has-background-link-light">
+
+  <div class="tile is-ancestor">
+      <div class="tile is-4 is-vertical is-parent">
+          <div class="tile is-child box">
+
+              <figure class="image is-5by4" >
+                  <img src="./assets/images/Brand - Final.png" alt = "Particle Solutions Brand: Light purple background">
+              </figure>
+          </div>
+      </div>
+  
+      <div class="tile is-parent">
+          <div class="tile is-child box">
+
+            <!-- <div>Title or Place Name</div> -->
+            <div class="buttons is-centered is-grouped">
+              <button id="airPollutionBtn" class="button is-link">Air Pollution</button>
+              <button id="grassPollenBtn" class="button is-link is-active">
+                Grass Pollen
+              </button>
+              <button id="treePollenBtn" class="button is-link">Tree Pollen</button>
+              <button id="weedPollenBtn" class="button is-link">Weed Pollen</button>
+            </div>
+            <div id="map" style="height: 360px">map</div>
+
+          </div>
+      </div>
+  </div>
+  
+  <footer class="footer">
+      <div class = "content has-text-centered">
+          <p> Particle Solutions &copy 2022</p>
+      </div>
+  </footer>
+
+  <script
+  src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+  integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+  crossorigin=""
+></script>
+<script src="./assets/js/map.js"></script>
+
+</body>
