@@ -25,7 +25,12 @@
 // console.log(getWeatherAPI);
 
 var airindex = document.getElementById("air-index")
+var cardheaderdate = document.getElementById("card-date")
 
 var air = localStorage.getItem("AQI");
 airindex.append(air);
+
+var carddate = localStorage.getItem("UNIX"); 
+cardheaderdate.append(carddate);
+
 
