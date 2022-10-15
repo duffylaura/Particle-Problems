@@ -37,15 +37,34 @@ actPlanBtn.addEventListener("click", function(){
 
 indexsubmitbtn.addEventListener("submit", function(help){
     help.preventDefault();
-    
-    if(document.getElementById('five-day').checked){
-       getValue();
-    }
-    if(document.getElementById('one-day').checked){
-        storeCity();
-        window.location.href = 'map.html';
-    }
+    var city = document.getElementById("city").value;
+    localStorage.setItem("cityName", city);
 
+    var geocodeKey = 'f4ac9ae98ce232f81e1a8c7e3fd76a5a';
+    var url = 'https://api.openweathermap.org/geo/1.0/direct?q='+city+'&limit=1&appid='+geocodeKey;
+    fetch(url).then(function(response){
+        return response.json()
+    }).then(function(data){
+        // console.log([0]);
+
+        if(document.getElementById('five-day').checked){
+          if(data[0]==undefined){
+            console.log("not valid");
+          }
+          else{
+           getValue();
+          }
+        }
+        if(document.getElementById('one-day').checked){
+          if(data[0]==undefined){
+            console.log("not valid");
+          }
+          else{
+            storeCity();
+            window.location.href = 'map.html';
+          }
+        }
+    })
 })
 
 var nextPage = function (e){
@@ -53,15 +72,11 @@ var nextPage = function (e){
     }
 
 function geoCodeApi (search){
-    console.log(search)
     var geocodeKey = 'f4ac9ae98ce232f81e1a8c7e3fd76a5a';
-    var url = 'https://api.openweathermap.org/geo/1.0/direct?q='+search+'&limit=1&appid='+geocodeKey
-    console.log(url)
+    var url = 'https://api.openweathermap.org/geo/1.0/direct?q='+search+'&limit=1&appid='+geocodeKey;
     fetch(url).then(function(response){
-        console.log(response)
         return response.json()
     }).then(function(data){
-        console.log(data);
         // console.log([0]);
         var lat = data[0].lat;
         var lon = data[0].lon;
@@ -73,10 +88,8 @@ function geoCodeApi (search){
         var apiKey = "aa3ac1aee36fc947283c79786b233621";
         var url = `https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
         fetch(url).then(function(response){
-            console.log(response)
             return response.json()
         }).then(function(data){
-            console.log(data)
             data = data.list[0]
            
             createCards(data)
@@ -86,7 +99,6 @@ function geoCodeApi (search){
                    
         
 function createCards(data){
-console.log(data);
 var airCO = data.components.co
             var aqi = data.main.aqi;
             var cardDate = data.dt;
@@ -99,7 +111,6 @@ var airCO = data.components.co
         
 function getValue(event){
         var city = document.getElementById("city").value;
-    console.log(city);
     localStorage.setItem("cityName", city);
         
         geoCodeApi(city)
