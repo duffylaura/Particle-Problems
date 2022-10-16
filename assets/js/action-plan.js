@@ -1,7 +1,7 @@
 //Global Variables// 
 var list = document.querySelector("#doing-well-list");
 var doingWellButton = document.querySelector("#doing-well-button");
-var listGw = document.querySelector("getting-worse-list");
+var listGw = document.querySelector("#getting-worse-list");
 var gettingWorseButton = document.querySelector("#getting-worse-button");
 var listMa = document.querySelector("#medical-alert-list");
 var medicalAlertButton = document.querySelector("#medical-alert-button");
@@ -40,7 +40,7 @@ function renderGettingWorse() {
 
 gettingWorseButton.addEventListener ("click", function (event){
   event.preventDefault(); 
-  var gettingWorseStorage = document.querySelector("#getting-worse").value; 
+  var gettingWorseStorage = document.querySelector("#getting-worse").value;
   listGw.textContent = gettingWorseStorage;
   localStorage.setItem ("gettingWorseKey", gettingWorseStorage); 
   renderGettingWorse(); 
