@@ -17,7 +17,7 @@ var aqiData3 = document.getElementById("aqi-data3");
 
 var cardBody = document.getElementById("card-body");
 cardBody.innerHTML = "";
-mainHeader.append(uppersaveCity + " 3 Days Forecast");
+mainHeader.append(uppersaveCity + " Pollen Forecast");
 
 
 function geoCode5day (){

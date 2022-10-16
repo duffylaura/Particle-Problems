@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>3 Days Forecast</title>
+    <title> 3 Day Forecast </title>
 </head>
 
 <body class="has-background-link-light">
@@ -16,28 +16,39 @@
                 <figure class="image is-5by4" >
                     <img src="./assets/images/Brand - Final.png" alt = "Particle Solutions Brand: Light purple background">
                 </figure>
-                <a href="https://en.wikipedia.org/wiki/Air_quality_index#CAQI"> Air Quality Index </a>
-                <p class="has-text-weight-bold" id="aqi-data1"></p>
-                <p class="has-text-weight-bold" id="aqi-data2"></p>
-                <p class="has-text-weight-bold" id="aqi-data3"></p>
-                <p class="is-size-7"> * Level ranges from 1 (Excellent) to 5 (Heavily Polluted) </p>
             </div>
         </div>
+
         <div class="tile is-parent">
             <div class="tile is-child box">
-                <!-- Add cards below this line -->
                 <h1 class="title is-size-10" id="container-header"></h1>
                 <div ca></div>
                 <div id="card-body"></div>
                 <div id="day-1"></div>
             </div>
         </div>
-    
-    <footer class="footer">
-        <div class = "content has-text-centered">
-            <p> Particle Solutions &copy 2022</p>
+
+        <div class="tile is-parent">
+            <div class="tile is-child box">
+                <div class = "content has-text-centered">
+                    <h1 class="title is-3"> Air Quality Index (AQI) Forecast </h1>
+                    <p class="has-text-weight-bold" id="aqi-data1"></p> 
+                    <p class="has-text-weight-bold" id="aqi-data2"></p> 
+                    <p class="has-text-weight-bold" id="aqi-data3"></p>
+                    <p class="is-size-6"> * Level ranges from 1 (Excellent) to 5 (Heavily Polluted) </p>
+                    <a href="https://en.wikipedia.org/wiki/Air_quality_index#CAQI"> Link for info on AQI </a> 
+                </div>
+            </div>
         </div>
-    </footer>
+
+    </div>
+
+        <footer class="footer">
+            <div class = "content has-text-centered">
+                <p> Particle Solutions &copy 2022</p>
+            </div>
+        </footer>
+
     <script type = "text/JavaScript" src = " https://MomentJS.com/downloads/moment.js"></script>
     <script src="./assets/js/5day.js"></script>
 </body>
