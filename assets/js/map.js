@@ -1,4 +1,5 @@
 var btns = document.querySelector('.buttons')
+var mapTitle = document.querySelector('#map-title');
 
 var getCityName = localStorage.getItem("cityName");
 geoCodeApi();
@@ -12,7 +13,7 @@ function geoCodeApi (){
     }).then(function(data){
         var lat = data[0].lat;
         var lon = data[0].lon;
-
+        mapTitle.textContent = getCityName;
         API_KEY = "f7ef38aba28849b8819220ae11e4b3e3";
         var map = L.map('map', {minZoom: 10}).setView([lat, lon], 13);
         var corner1 = L.latLng((lat-0.05), lon-0.05),
