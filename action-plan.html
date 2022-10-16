@@ -31,8 +31,11 @@
     
         <div class="tile is-parent">
             <div class="tile is-child box">
+                
+                <h4 class="content has-text-centered">Tweak and edit your asthma action plan. Add notes to share with your doctor. </h4>
+                <br>
                 <!-- Doing Well Form -->
-                <form id="doing-well-form" class="form">
+                <form class="form">
                     <label> Doing Well looks/feels like...</label> <br>
                     <input type="text" id="doing-well">
 
@@ -41,20 +44,29 @@
                 <br><br>
                 
                 <!-- Asthma Getting Worse Form -->
-                <form id="getting-worse-form" class="form">
+                <form class="form">
                     <label> Getting Worse looks/feels like... </label> <br>
                     <input type="text" id="getting-worse">
 
-                    <button type="submit" value="Submit"> Submit </button>
+                    <button id="getting-worse-button" type="submit" value="Submit"> Submit </button>
                 </form>
                 <br><br>
                 
                  <!-- Medical Alert Form -->
-                <form id="medical-alert-form" class="form">
+                <form class="form">
                     <label> Medical Alert looks/feels like... </label> <br>
                     <input type="text" id="medical-alert">
 
-                    <button type="submit" value="Submit"> Submit </button>
+                    <button id = "medical-alert-button" type="submit" value="Submit"> Submit </button>
+                </form>
+                <br><br>
+
+                 <!-- Notes 4 Dr Form -->
+                 <form class="form">
+                    <label> Notes for next time I see my Physician...</label> <br>
+                    <input type="text" id="notes">
+
+                    <button id="notes-button" type="submit" value="Submit"> Submit </button>
                 </form>
                 <br><br>
 
@@ -63,19 +75,26 @@
 
         <div class="tile is-parent">
             <div class="tile is-child box">
-                   
-                    <h4 class="content has-text-centered">My Asthma Action Plan</h4>
                     <br>
-                    <h2>Doing Well:</h2>
-                    <ul class="doing-well-list-group" id="doing-well-list"></ul>
+                    <div class="content has-text-centered" >
+                        <h1 class="title is-4">My Asthma Action Plan</h1>
+                    </div>
+                    <br>
+
+                    <h2 class="title is-5">Doing Well:</h2>
+                    <ul id="doing-well-list"></ul>
                     <br><br>
 
-                    <h2>Getting Worse:</h2>
-                    <ul class="getting-worse-list-group" id="getting-worse-list"></ul>
+                    <h2 class="title is-5">Getting Worse:</h2>
+                    <ul id="getting-worse-list"></ul>
                     <br><br>
 
-                    <h2>Medical Alert:</h2>
-                    <ul class="medical-alert-list-group" id="medical-alert-list"></ul>
+                    <h2 class="title is-5">Medical Alert:</h2>
+                    <ul id="medical-alert-list"></ul>
+                    <br><br>
+
+                    <h2 class="title is-5">Notes:</h2>
+                    <ul id="notes-list"></ul>
                     <br><br>
             </div>
         </div>
