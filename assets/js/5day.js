@@ -12,7 +12,7 @@ var mainHeader = document.getElementById("container-header");
 
 // airindex.append(air);
 var cardBody = document.getElementById("card-body")
-cardheaderdate.append(correctDate);
+// cardheaderdate.append(correctDate);
 mainHeader.append(uppersaveCity + " 3 Day Forecast");
 
 
@@ -50,8 +50,9 @@ function breezometer(lat,lon){
         for(var i = 0; i < 3; i++){
             var bodyNewMainDiv = document.createElement("div");
             bodyNewMainDiv.setAttribute("class", "body-new-div")
+            
             var cards = document.createElement("div");
-            cards.setAttribute("class", "all-data-body");
+            cards.setAttribute("class", "card-content");
             var h4 = document.createElement("h4").textContent = moment(data.data[i].date).format("MM/DD/YYYY");
             // var icon = document.createElement("img"); if we want to add in image
             // icon.setAttribute("src", "" + newImageIcon + ".png"); if we want to add in image
