@@ -30,8 +30,8 @@ var indexsubmitbtn = document.querySelector("form");
 var city = document.getElementById("city").value;
 var actPlanBtn = document.getElementById('aap-btn');
 var modalEl = document.querySelector(".modal");
-var modalCloseBtnEl = document.querySelector(".delete");
 var modalOKBtnEl = document.querySelector(".ok-btn");
+var modalTextEl = document.querySelector("#user-valid");
 
 actPlanBtn.addEventListener("click", function () {
   window.location.href = "action-plan.html";
@@ -44,6 +44,7 @@ indexsubmitbtn.addEventListener("submit", function (help) {
   localStorage.setItem("cityName", city);
   if (city == "") {
     modalEl.classList.add('is-active');
+    modalTextEl.textContent = "Please enter a valid city name";
     modalOKBtnEl.addEventListener('click', function () {
       modalEl.classList.remove('is-active');
     });
@@ -59,6 +60,7 @@ indexsubmitbtn.addEventListener("submit", function (help) {
       if (document.getElementById('five-day').checked) {
         if (data[0] == undefined) {
           modalEl.classList.add('is-active');
+          modalTextEl.textContent = "Please enter a valid city name";
           modalOKBtnEl.addEventListener('click', function () {
             modalEl.classList.remove('is-active');
           });
@@ -67,9 +69,10 @@ indexsubmitbtn.addEventListener("submit", function (help) {
           getValue();
         }
       }
-      if (document.getElementById('one-day').checked) {
+      else if (document.getElementById('one-day').checked) {
         if (data[0] == undefined) {
           modalEl.classList.add('is-active');
+          modalTextEl.textContent = "Please enter a valid city name";
           modalOKBtnEl.addEventListener('click', function () {
             modalEl.classList.remove('is-active');
           });
@@ -78,6 +81,13 @@ indexsubmitbtn.addEventListener("submit", function (help) {
           storeCity();
           window.location.href = 'map.html';
         }
+      }
+      else {
+        modalEl.classList.add('is-active');
+        modalTextEl.textContent = "Please select one of the radio options";
+        modalOKBtnEl.addEventListener('click', function () {
+          modalEl.classList.remove('is-active');
+        });
       }
     })
   }
