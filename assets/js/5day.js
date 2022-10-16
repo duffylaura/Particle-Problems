@@ -8,10 +8,15 @@ var uppersaveCity = saveCity.toUpperCase();
 // var lat2 = localStorage.getItem("lat");
 // var lon2 = localStorage.getItem("lon");
 var mainHeader = document.getElementById("container-header");
+var apiText = document.getElementById("api");
+var grass = document.getElementById("grass");
+var tree = document.getElementById("tree");
+var weed = document.getElementById("weed");
 
 
 // airindex.append(air);
-var cardBody = document.getElementById("card-body")
+var cardBody = document.getElementById("card-body");
+cardBody.innerHTML = "";
 // cardheaderdate.append(correctDate);
 mainHeader.append(uppersaveCity + " 3 Day Forecast");
 
@@ -48,27 +53,44 @@ function breezometer(lat,lon){
         console.log(pollutants)
 
         for(var i = 0; i < 3; i++){
-            var bodyNewMainDiv = document.createElement("div");
-            bodyNewMainDiv.setAttribute("class", "body-new-div")
-            
+           
             var cards = document.createElement("div");
-            cards.setAttribute("class", "card-content");
-            var h4 = document.createElement("h4").textContent = moment(data.data[i].date).format("MM/DD/YYYY");
+            cards.setAttribute("class", "card tile");
+            var cardContent = document.createElement("table");
+            cardContent.setAttribute("class", "table has-text-centered");
+            var timerow = document.createElement("tr");
+            var grassrow = document.createElement("tr");
+            var treerow = document.createElement("tr");
+            var weedrow = document.createElement("tr");
+            var timetext = document.createElement("td");
+            var grasstext = document.createElement("td");
+            var treetext = document.createElement("td");
+            var weedtext = document.createElement("td");
+            var h4 = document.createElement("td").textContent = moment(data.data[i].date).format("MM/DD/YYYY");
+            var newgrasspollen = document.createElement("td").textContent = " Grass Pollen Index: "+data.data[i].types.grass.index.category;
+            var newtreepollen = document.createElement("td").textContent = "Tree Pollen Index: "+data.data[i].types.tree.index.category;
+            var newweedpollen = document.createElement("td").textContent = " Weed Pollen Index: "+data.data[i].types.weed.index.category;
+            // var result = h4 + newgrasspollen + newtreepollen + newweedpollen
+            timetext.append(h4)
+            grasstext.append(newgrasspollen);
+            treetext.append(newtreepollen);
+            weedtext.append(newweedpollen);
+            timerow.append(timetext)
+            grassrow.append(grasstext);
+            treerow.append(treetext);
+            weedrow.append(weedtext);
+            // tablerow.append(result);
+            cardContent.append(timerow, grassrow, treerow, weedrow);
+            // cards.append(cardContent);
+            cardBody.append(cardContent); 
+        }
             // var icon = document.createElement("img"); if we want to add in image
             // icon.setAttribute("src", "" + newImageIcon + ".png"); if we want to add in image
-            var newaqi = document.createElement("p").textContent = "AQI: "+pollutants.list[i].main.aqi;
-            var newgrasspollen = document.createElement("p").textContent = "Grass Pollen Index: "+data.data[i].types.grass.index;
-            var newtreepollen = document.createElement("p").textContent = "Tree Pollen Index: "+data.data[i].types.tree.index;
-            var newweedpollen = document.createElement("p").textContent = "Weed Pollen Index: "+data.data[i].types.weed.index;
-            cards.append(h4, newaqi, newgrasspollen, newtreepollen, newweedpollen);
-            bodyNewMainDiv.append(cards);
-            cardBody.append(bodyNewMainDiv); 
-  
-        }})})}
-    
-// }})
+            
 
-// }
+            })})}
+  
+        
 
     geoCode5day()
 
