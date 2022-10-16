@@ -1,7 +1,6 @@
-
 // Doing Well //
 
-var formEl = $('#doing-well-form');
+/* var formEl = $('#doing-well-form');
 var doingWellEl = $('#doing-well');
 var doingWellListEl = $('#doing-well-list');
 
@@ -24,7 +23,7 @@ var handleFormSubmit = function (event) {
 
 formEl.on('submit', handleFormSubmit);
 
-///////////////////////
+*///////////////////////
 
 // Asthma Getting Worse //
 
@@ -75,3 +74,78 @@ var handleMedicalAlertFormSubmit = function (event) {
 };
 
 medicalAlertFormEl.on('submit', handleMedicalAlertFormSubmit);
+
+//// Local Storage ///
+
+renderDoingWell(); 
+
+var doingWellButton = document.querySelector("#doing-well-button");
+
+doingWellButton.addEventListener("click", function(event){
+  event.preventDefault(); 
+  var ul = document.getElementById("doing-well-list");
+
+  var input = document.getElementById("doing-well");
+
+  var li = document.createElement("li"); 
+
+  li.setAttribute('id', input.value);
+
+  li.appendChild(document.createTextNode(input.value));
+
+  ul.appendChild(li);
+  
+  var doingWellStorage = document.querySelector("#doing-well").value;
+  
+  var index = Math.floor(Math.random() * 10)
+
+  var key = index.toString();
+
+  localStorage.setItem(key, doingWellStorage);
+
+});
+
+
+function renderDoingWell() {
+  var output0 = localStorage.getItem("0");
+  var output1 = localStorage.getItem("1");
+  var output2 = localStorage.getItem("2");
+  var output3 = localStorage.getItem("3");
+  var output4 = localStorage.getItem("4");
+  var output5 = localStorage.getItem("5");
+  var output6 = localStorage.getItem("6");
+  var output7 = localStorage.getItem("7");
+  var output8 = localStorage.getItem("8");
+  var output9 = localStorage.getItem("9");
+  var output10 = localStorage.getItem("10");
+
+  var list = document.querySelector("#doing-well-list");
+
+  // list.textContent = output0, output1, output2, output3, output4, output5, output6, output7, output8, output9, output10; 
+
+  list.textContent = output8;
+}
+
+
+
+
+/*
+var list = document.querySelector("#doing-well-list");
+var doingWellButton = document.querySelector("#doing-well-button");
+
+
+renderDoingWell(); 
+
+function renderDoingWell () {
+  var doingWellStorage = localStorage.getItem("doingWellKey");
+  list.textContent = doingWellStorage;
+}
+
+doingWellButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  var doingWellStorage = document.querySelector("#doing-well").value;
+  list.textContent = doingWellStorage;
+  localStorage.setItem("doingWellKey", doingWellStorage);
+  renderDoingWell(); 
+  }
+); */
