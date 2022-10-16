@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>5 Days Forecast</title>
+    <title>3 Days Forecast</title>
 </head>
 
 <body class="has-background-link-light">
@@ -17,68 +16,29 @@
                 <figure class="image is-5by4" >
                     <img src="./assets/images/Brand - Final.png" alt = "Particle Solutions Brand: Light purple background">
                 </figure>
+                <a href="https://en.wikipedia.org/wiki/Air_quality_index#CAQI"> Air Quality Index </a>
+                <p class="has-text-weight-bold" id="aqi-data1"></p>
+                <p class="has-text-weight-bold" id="aqi-data2"></p>
+                <p class="has-text-weight-bold" id="aqi-data3"></p>
+                <p class="is-size-7"> * Level ranges from 1 (Excellent) to 5 (Heavily Polluted) </p>
             </div>
         </div>
-    
         <div class="tile is-parent">
             <div class="tile is-child box">
-
-               
-
                 <!-- Add cards below this line -->
-                <div class="column">
-                    <h1 class="title has-text-centered is-size-10"> 5 Day Forecast </h1>
-                     
-                    <!-- <div class="columns mt-5 is-8 is-variable">
-                      <div class="column is-4-tablet is-2-desktop"> -->
-                       
-                       <div class="card" class="content has-text-centered">
-                           <header id="card-date"></header>
-                        <div class="card-image has-text-centered px-6" id="day">
-                         <img src="./assets/Mocossi.png" alt="">
-                        </div>
-                           <div class="card-content">
-                               <p id="air-index">AQI: </p>
-                               <p>grass pollen:</p>
-                               <p>tree pollen:</p>
-                               <p>weed pollen:</p>
-                           </div>
-                       </div>
-
-
-
-                       <div class="card" class="content has-text-centered">
-                        <header id="card-date"></header>
-                     <div class="card-image has-text-centered px-6" id="day">
-                      <img src="./assets/Mocossi.png" alt="">
-                     </div>
-                        <div class="card-content">
-                            <p id="air-index">AQI: </p>
-                            <p>grass pollen:</p>
-                            <p>tree pollen:</p>
-                            <p>weed pollen:</p>
-                        </div>
-                    </div>
-
-
-
-
-
-                       </div>
-                    </div>
-                </div>
-            <!-- Add cards above this line -->
-
+                <h1 class="title is-size-10" id="container-header"></h1>
+                <div ca></div>
+                <div id="card-body"></div>
+                <div id="day-1"></div>
             </div>
         </div>
-    </div>
     
     <footer class="footer">
         <div class = "content has-text-centered">
             <p> Particle Solutions &copy 2022</p>
         </div>
     </footer>
-
+    <script type = "text/JavaScript" src = " https://MomentJS.com/downloads/moment.js"></script>
     <script src="./assets/js/5day.js"></script>
 </body>
 </html>
