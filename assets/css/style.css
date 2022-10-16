@@ -1,0 +1,14 @@
+.custom-modal-header{
+    background-color: #9090E8;
+}
+
+.custom-modal-body{
+    background-color: #f5f6fe;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.custom-modal-btn{
+    background-color: #9090E8;
+    color: #f5f6fe;
+}
