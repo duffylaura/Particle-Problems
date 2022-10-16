@@ -10,11 +10,14 @@ var apiText = document.getElementById("api");
 var grass = document.getElementById("grass");
 var tree = document.getElementById("tree");
 var weed = document.getElementById("weed");
+var aqiData1 = document.getElementById("aqi-data1");
+var aqiData2 = document.getElementById("aqi-data2");
+var aqiData3 = document.getElementById("aqi-data3");
 
 
 var cardBody = document.getElementById("card-body");
 cardBody.innerHTML = "";
-mainHeader.append(uppersaveCity + " 3 Day Forecast");
+mainHeader.append(uppersaveCity + " 3 Days Forecast");
 
 
 function geoCode5day (){
@@ -54,6 +57,7 @@ function breezometer(lat,lon){
         var timerow = document.createElement("tr");
         timerow.setAttribute("class", "has-text-centered");
         var grassrow = document.createElement("tr");
+        grassrow.setAttribute("class", "bg-grass");
         var treerow = document.createElement("tr");
         var weedrow = document.createElement("tr");
         var timetext = document.createElement("td");
@@ -74,6 +78,8 @@ function breezometer(lat,lon){
         weedrow.append(weedtext);
         cardContent.append(timerow, grassrow, treerow, weedrow);
         cardBody.append(cardContent); 
+
+      
     }
     // var icon = document.createElement("img"); if we want to add in image
     // icon.setAttribute("src", "" + newImageIcon + ".png"); if we want to add in image
@@ -85,10 +91,13 @@ function breezometer(lat,lon){
     localStorage.setItem("day1aqi", day1)
     localStorage.setItem("day2aqi", day2)
     localStorage.setItem("day3aqi", day3)
-            
-          
+    
+    aqiData1.append(moment(data.data[0].date).format("MM/DD/YYYY")+": "+"AQI index: "+ day1);
+    aqiData2.append(moment(data.data[1].date).format("MM/DD/YYYY")+": "+"AQI index: "+ day2);
+    aqiData3.append(moment(data.data[2].date).format("MM/DD/YYYY")+": "+"AQI index: "+ day3);
 
-            })})}
+
+})})}
   
         
 
