@@ -92,9 +92,9 @@ function breezometer(lat,lon){
     localStorage.setItem("day2aqi", day2)
     localStorage.setItem("day3aqi", day3)
     
-    aqiData1.append(moment(data.data[0].date).format("MM/DD/YYYY")+": "+"AQI index: "+ day1);
-    aqiData2.append(moment(data.data[1].date).format("MM/DD/YYYY")+": "+"AQI index: "+ day2);
-    aqiData3.append(moment(data.data[2].date).format("MM/DD/YYYY")+": "+"AQI index: "+ day3);
+    aqiData1.append(moment(data.data[0].date).format("MM/DD/YYYY")+": "+"AQI index: "+ "Level "+day1);
+    aqiData2.append(moment(data.data[1].date).format("MM/DD/YYYY")+": "+"AQI index: "+ "Level "+day2);
+    aqiData3.append(moment(data.data[2].date).format("MM/DD/YYYY")+": "+"AQI index: "+ "Level "+day3);
 
 
 })})}
