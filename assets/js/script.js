@@ -29,6 +29,9 @@ $(function () {
 var indexsubmitbtn = document.querySelector("form");
 var city = document.getElementById("city").value;
 var actPlanBtn = document.getElementById('aap-btn');
+var modalEl = document.querySelector(".modal");
+var modalCloseBtnEl = document.querySelector(".delete");
+var modalOKBtnEl = document.querySelector(".ok-btn");
 
 actPlanBtn.addEventListener("click", function(){
     window.location.href = "action-plan.html";
@@ -49,7 +52,10 @@ indexsubmitbtn.addEventListener("submit", function(help){
 
         if(document.getElementById('five-day').checked){
           if(data[0]==undefined){
-            console.log("not valid");
+              modalEl.classList.add('is-active');
+              modalOKBtnEl.addEventListener('click',function(){
+                modalEl.classList.remove('is-active');
+              });
           }
           else{
            getValue();
@@ -57,7 +63,10 @@ indexsubmitbtn.addEventListener("submit", function(help){
         }
         if(document.getElementById('one-day').checked){
           if(data[0]==undefined){
-            console.log("not valid");
+            modalEl.classList.add('is-active');
+              modalOKBtnEl.addEventListener('click',function(){
+                modalEl.classList.remove('is-active');
+              });
           }
           else{
             storeCity();
