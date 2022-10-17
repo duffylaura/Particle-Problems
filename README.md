@@ -1,6 +1,7 @@
 # PARTICLE SOLUTIONS
 Got Particle Problems? We got Particle Solutions!
 
+https://duffylaura.github.io/Particle-Problems/
 
 ## Description
 ![pollution-description](https://user-images.githubusercontent.com/113512061/196066564-b4a25c7d-a447-4369-aa2c-151c199b07e1.png)
@@ -15,15 +16,13 @@ Our application will provide a solution to those with Particle Problems in one c
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Technologies](#technologies-used)
 - [Credits](#credits)
 - [License](#license)
 
 ## Installation
  
- Our team came together to decide how to create an application that is easy to use and useful for users who are interest about the air quality and pollen count and at the same time meet the project requirements.
-
- REQUIREMENTS:
- ![image](https://user-images.githubusercontent.com/113512061/196136197-a97e8fb3-22aa-4f1a-bd7e-9a5334102ad8.png)
+ Our team came together to decide how to create an application that is easy to use and useful for users who are interest about the air quality and pollen count.
 
  Our Workflow:
  ![image](https://user-images.githubusercontent.com/113512061/196134893-112b77c0-95cc-49d8-8e49-ab04d6e85f21.png)
@@ -45,39 +44,27 @@ Breakdown of how to use Particle Solutions!
     * The My Asthma Action Plan page allows the user to input their data and save it all in one place so they can refer to it or make changes to it.
     * The Giving Back page is still in progress but the goal there is to allow the user to access more data if they want to donate to organizations that provde resources to the community who has asthma and/or struggles to get the proper care for their severe allergies. 
 
-
-
+## Technologies Used    
+* GitHub
+* Apple Photos “MarkUp” feature
+* MarkDown
+* HTML
+* CSS 
+* JavaScript 
+* APIs: Breeze-O-Meter and Open Weather Map
+* Libraries: Bulma, Leaflet, jQuery, jQuery widgets
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Collaborators:
+* Laura D. https://github.com/duffylaura
+* Mai M. https://github.com/SkyWalkerMM26
+* Nicole G. https://github.com/ncguan
+* Philip H. https://github.com/PhilipHuang2
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License
 
 ---
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
