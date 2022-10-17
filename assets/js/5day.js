@@ -57,7 +57,6 @@ function breezometer(lat,lon){
         var timerow = document.createElement("tr");
         timerow.setAttribute("class", "has-text-centered");
         var grassrow = document.createElement("tr");
-        grassrow.setAttribute("class", "bg-grass");
         var treerow = document.createElement("tr");
         var weedrow = document.createElement("tr");
         var timetext = document.createElement("td");
@@ -81,8 +80,6 @@ function breezometer(lat,lon){
 
       
     }
-    // var icon = document.createElement("img"); if we want to add in image
-    // icon.setAttribute("src", "" + newImageIcon + ".png"); if we want to add in image
 
     var day1 = pollutants.list[0].main.aqi;
     var day2 = pollutants.list[25].main.aqi;    
