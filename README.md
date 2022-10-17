@@ -31,8 +31,12 @@ Our application will provide a solution to those with Particle Problems in one c
 
  ## Usage
 
- <video src="https://user-images.githubusercontent.com/113512061/196125187-7565a5c5-73b8-47b8-ac5e-a57f450b682a.webm" controls="controls" style="max-width: 730px;"></video>
+![todaymap](https://user-images.githubusercontent.com/113512061/196237021-f0ef57b5-e4f9-41d6-b01a-c2f6bb6dfbde.gif)
+![3dayforecast](https://user-images.githubusercontent.com/113512061/196237689-4dfadbb8-8f8f-4b22-af0b-f3d8d7ef1798.gif)
+![aap](https://user-images.githubusercontent.com/113512061/196238033-a1c77de2-e2e7-43df-ae3c-ff880b8d894a.gif)
 
+
+ 
 Breakdown of how to use Particle Solutions!
 1. Enter a city on the landing page.
 2. Select if you want to see Today or a Three-Day Forecast, then click submit.
@@ -65,6 +69,7 @@ Collaborators:
 ## License
 
 MIT License
+* Please refer to the LICENSE file in the Repository.
 
 ---
 
