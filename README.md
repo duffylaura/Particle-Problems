@@ -12,22 +12,34 @@ Like light coming through a window in a dusty room, we want to illuminate how ma
 
 Our application will provide a solution to those with Particle Problems in one click, instead of several Googles per day. 
 
+![image](https://user-images.githubusercontent.com/113512061/196461906-d53b02ea-7879-45e6-963e-348309ab4372.png)
+
+
 ## Table of Contents 
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [API](#api-calls)
 - [Technologies](#technologies-used)
 - [Credits](#credits)
 - [License](#license)
 
 ## Installation
  
- Our team came together to decide how to create an application that is easy to use and useful for users who are interest about the air quality and pollen count.
-
+ Our team came together to decide how to create an application that is easy to use and useful for users who are interest about the air quality and pollen count. 
  Our Workflow:
  ![image](https://user-images.githubusercontent.com/113512061/196134893-112b77c0-95cc-49d8-8e49-ab04d6e85f21.png)
 
 
+## Technologies Used    
+* GitHub
+* Apple Photos “MarkUp” feature
+* MarkDown
+* HTML
+* CSS 
+* JavaScript 
+* APIs: Breeze-O-Meter and Open Weather Map
+* Libraries: Bulma, Leaflet, jQuery, jQuery widgets
 
  ## Usage
 
@@ -48,15 +60,60 @@ Breakdown of how to use Particle Solutions!
     * The My Asthma Action Plan page allows the user to input their data and save it all in one place so they can refer to it or make changes to it.
     * The Giving Back page is still in progress but the goal there is to allow the user to access more data if they want to donate to organizations that provde resources to the community who has asthma and/or struggles to get the proper care for their severe allergies. 
 
-## Technologies Used    
-* GitHub
-* Apple Photos “MarkUp” feature
-* MarkDown
-* HTML
-* CSS 
-* JavaScript 
-* APIs: Breeze-O-Meter and Open Weather Map
-* Libraries: Bulma, Leaflet, jQuery, jQuery widgets
+
+## API calls 
+When the user clicks the submit button on the landing page after inputing their city of choice and selecting the radio option of today's or 3-day forecast, there will be api call(s). These api calls allow us to use data from other websites and select to show what content to show the user. This can be seen in the console of the web browser. 
+
+![consoleapi](https://user-images.githubusercontent.com/113512061/196467298-166d442b-517b-429e-b342-1a7551616b33.gif)
+
+
+
+###  Here are code snippets of how we used server-side API:
+
+```
+function geoCode5day (){
+    var geocodeKey = "f4ac9ae98ce232f81e1a8c7e3fd76a5a";
+    var url = "https://api.openweathermap.org/geo/1.0/direct?q="+saveCity+"&limit=1&appid="+geocodeKey
+    fetch(url).then(function(response){
+        return response.json()
+    }).then(function(data){
+        var lat = data[0].lat;
+        var lon = data[0].lon;
+        breezometer(lat,lon)
+        localStorage.setItem("lat", lat);
+        localStorage.setItem("lon", lon);
+    })
+}
+```
+
+```
+function breezometer(lat,lon){
+    var breezokey = "f7ef38aba28849b8819220ae11e4b3e3";
+    url= "https://api.breezometer.com/pollen/v2/forecast/daily?lat="+lat+"&lon="+lon+"&key="+breezokey+"&days=3"
+    fetch(url).then(function(response){ 
+        console.log(response)
+        return response.json()
+    }).then(function(data){
+        console.log(data)
+        
+    var apiKey = "aa3ac1aee36fc947283c79786b233621";
+    var oneweatherairurl = `https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
+    fetch(oneweatherairurl).then(function(pollutants){
+        console.log(pollutants)
+        return pollutants.json()
+    }).then(function(pollutants){
+        console.log(pollutants)
+```
+
+## CSS Framework
+
+We used [BULMA](https://bulma.io/) to style our webpage!
+
+Here is how our application functions on a smaller screen size.
+
+![Particles Solutions](https://user-images.githubusercontent.com/113512061/196472775-579aca27-3bd8-4274-aa4a-8533843c665e.gif)
+
+
 
 ## Credits
 
