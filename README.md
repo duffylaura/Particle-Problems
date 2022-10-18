@@ -21,6 +21,7 @@ Our application will provide a solution to those with Particle Problems in one c
 - [Usage](#usage)
 - [API](#api-calls)
 - [Technologies](#technologies-used)
+- [CSS](#css-framework)
 - [Credits](#credits)
 - [License](#license)
 
@@ -114,6 +115,10 @@ Here is how our application functions on a smaller screen size.
 ![Particles Solutions](https://user-images.githubusercontent.com/113512061/196472775-579aca27-3bd8-4274-aa4a-8533843c665e.gif)
 
 
+## Learning Objectives
+* We definitely learned how to dynamically work with each other to avoid merging repo conflicts.
+* We also have learned about server-apis on how to use them, use new libraries like BULMA to style our webspage, and use library like Leaflet to provide us a map so we can present it to our users.
+* Most importantly we collarative with each other to test out what failed and what works!
 
 ## Credits
 
