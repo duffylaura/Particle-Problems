@@ -22,6 +22,7 @@ Our application will provide a solution to those with Particle Problems in one c
 - [API](#api-calls)
 - [Technologies](#technologies-used)
 - [CSS](#css-framework)
+- [Learning Objectives](#learning-objectives)
 - [Credits](#credits)
 - [License](#license)
 
